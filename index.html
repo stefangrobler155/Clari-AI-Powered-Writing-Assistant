@@ -1,35 +1,180 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clari – AI Writing Assistant</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clari - AI-Powered Writing Assistant</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-content">
-      <h1 class="logo">Clari</h1>
-      <nav class="nav-links">
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
-        <a href="#">Sign Up</a>
-      </nav>
+  <!-- Header -->
+  <header class="sticky-header">
+    <nav class="container">
+      <div class="logo">Clari</div>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#demo" class="nav-link">Demo</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </div>
+      <div class="nav-controls">
+        <button id="mobile-menu-btn" class="mobile-btn">
+          <ion-icon name="grid-outline"></ion-icon>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#demo" class="nav-link">Demo</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Write Smarter, Not Harder</h2>
-        <p>Clari helps you turn your ideas into clear, compelling writing in seconds.</p>
-        <a href="#" class="cta-button">Try Clari Free →</a>
+  <!-- Hero Section -->
+  <section class="hero parallax">
+    <div class="hero-wrapper">
+        <div class="container text-center">
+        <h1 class="fade-in">Write Smarter, Not Harder</h1>
+        <p class="fade-in">Clari helps you turn your ideas into clear, compelling writing in seconds.</p>
+        <a href="#cta" class="cta-btn fade-in">Try It Free</a>
       </div>
-      <div class="hero-image">
-        <img src="https://via.placeholder.com/500x300?text=App+Preview" alt="App Preview" />
+      <div class="container text-center">
+        <img src="./media/hero-img.jpg" alt="hero" class="hero-img fade-in">
+      </div>
+    </div>    
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Features</h2>
+      <div class="grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">✨</div>
+          <h3>AI Sentence Rewriting</h3>
+          <p>Transform your sentences for clarity and impact instantly.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">📚</div>
+          <h3>Grammar & Style Check</h3>
+          <p>Catch errors and refine your tone with precision.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🧠</div>
+          <h3>Idea Expander</h3>
+          <p>Turn brief thoughts into detailed, coherent content.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🌐</div>
+          <h3>Multilingual Support</h3>
+          <p>Write confidently in multiple languages.</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Demo Preview Section -->
+  <section id="demo" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">See Clari in Action</h2>
+      <div class="demo-box">
+        <p class="demo-text">Type a sentence...</p>
+        <input type="text" value="I write good content." class="demo-input" disabled>
+        <p class="demo-text">Clari suggests:</p>
+        <p id="demo-output" class="demo-output">I craft compelling, high-quality content with ease.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section bg-light">
+    
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Pricing</h2>
+      <div class="pricing-toggle">
+        <button id="monthly-btn" class="toggle-btn active">Monthly</button>
+        <button id="yearly-btn" class="toggle-btn">Yearly</button>
+      </div>
+      <div class="grid">
+        <div class="pricing-card fade-in">
+          <h3>Free</h3>
+          <p id="free-price" class="price">$0<span>/month</span></p>
+          <ul>
+            <li>Basic AI rewriting</li>
+            <li>Grammar check</li>
+            <li>Limited usage</li>
+          </ul>
+          <a href="#cta" class="cta-btn">Get Started</a>
+        </div>
+        <div class="pricing-card fade-in">
+          <h3>Pro</h3>
+          <p id="pro-price" class="price">$9.99<span>/month</span></p>
+          <ul>
+            <li>Advanced AI rewriting</li>
+            <li>Full grammar & style</li>
+            <li>Idea expander</li>
+            <li>Multilingual support</li>
+          </ul>
+          <a href="#cta" class="cta-btn">Go Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section bg-light">
+    <!-- To BE build -->
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="section cta-bg">
+    <div class="container text-center">
+      <h2 class="section-title fade-in">Start Writing Better Today</h2>
+      <p class="fade-in">Join thousands of users transforming their writing with Clari.</p>
+      <div class="cta-form fade-in">
+        <input type="email" placeholder="Enter your email" class="cta-input">
+        <button class="cta__btn-input">Try It Free</button>
+      </div>
+      <p class="fade-in stat">1M+ words improved and counting!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">Clari</div>
+        <div class="footer-links">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#demo" class="nav-link">Demo</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </div>
+        <div class="social-links">
+          <a href="#" class="nav-link">Twitter</a>
+          <a href="#" class="nav-link">Facebook</a>
+          <a href="#" class="nav-link">LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer-text">© 2025 Clari. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/scripts.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+
+
+
