@@ -31,7 +31,12 @@
       <a href="#testimonials" class="nav-link">Testimonials</a>
       <a href="#pricing" class="nav-link">Pricing</a>
       <a href="#faq" class="nav-link">FAQ</a>
-      
+      <div class="mobile-nav-controls">
+        <button id="mobile-theme-toggle" class="theme-btn">
+          <span class="dark-hidden">🌙</span>
+          <span class="light-hidden">☀️</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -92,7 +97,46 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="section bg-light">
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">What Users Say</h2>
+      <div class="testimonial-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Clari saved me hours of editing—my writing is sharper than ever!"</p>
+                    <p class="testimonial-author">— Jane D.</p>
+                    <p class="testimonial-role">Freelance Writer</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="testimonial">
+                    <p class="testimonial-text">"The idea expander is a game-changer for my essays!"</p>
+                    <p class="testimonial-author">— Alex P</p>
+                    <p class="testimonial-role">Student</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Multilingual support made my global project a breeze."</p>
+                    <p class="testimonial-author">- David Wilson</p>
+                    <p class="testimonial-role">Marketer</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="prev-btn" aria-label="Previous testimonial">&#10094;</button>
+            <div class="indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+            </div>
+            <button class="next-btn" aria-label="Next testimonial">&#10095;</button>
+        </div>
+    </div>
+    </div>
+    
     
   </section>
 
@@ -107,7 +151,7 @@
       <div class="grid">
         <div class="pricing-card fade-in">
           <h3>Free</h3>
-          <p id="free-price" class="price">$0<span>/month</span></p>
+          <p id="free-price" class="price">R0<span>/month</span></p>
           <ul>
             <li>Basic AI rewriting</li>
             <li>Grammar check</li>
@@ -117,7 +161,7 @@
         </div>
         <div class="pricing-card fade-in">
           <h3>Pro</h3>
-          <p id="pro-price" class="price">$9.99<span>/month</span></p>
+          <p id="pro-price" class="price">R9.99<span>/month</span></p>
           <ul>
             <li>Advanced AI rewriting</li>
             <li>Full grammar & style</li>
@@ -131,8 +175,30 @@
   </section>
 
   <!-- FAQ Section -->
-  <section id="faq" class="section bg-light">
-    <!-- To BE build -->
+  <section id="faq" class="section">
+    <h2 class="section-title fade-in">Frequently Asked Questions</h2>
+     <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-header">Is my data secure?</button>
+            <div class="accordion-content">
+                <p>Yes, we use top-tier encryption to protect your text and personal information.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <button class="accordion-header">What languages does Clari support?</button>
+            <div class="accordion-content">
+                <p>Clari supports English, Spanish, French, and more, with new languages added regularly.</p>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <button class="accordion-header">How does Clari improve my writing?</button>
+            <div class="accordion-content">
+                <p>Clari uses AI to rewrite sentences, check grammar, and expand ideas, making your writing clear and professional.</p>
+            </div>
+        </div>
+    </div>
   </section>
 
   <!-- Call to Action Section -->

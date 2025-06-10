@@ -67,6 +67,7 @@ h2, h3 {
 }
 .section {
   padding: 3rem 1rem;
+  scroll-margin-top: 3rem;
 }
 
 /* Fade-in Animation */
@@ -122,13 +123,6 @@ nav {
   align-items: center;
   gap: var(--padding-base);
 }
-.theme-btn {
-  padding: var(--padding-base);
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  cursor: pointer;
-  border: none;
-}
 .mobile-btn {
   display: none;
   padding: var(--padding-sm);
@@ -150,6 +144,9 @@ nav {
   top: 100%;
   left: 0;
   z-index: 49;
+}
+.mobile-menu :last-child {
+  margin-bottom: var(--padding-lg);
 }
 .mobile-menu:not(.hidden) {
   opacity: 1;
@@ -257,7 +254,7 @@ nav {
   background-color: var(--light-bg);
 }
 .section-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-bold);
   text-align: center;
   margin-bottom: var(--margin-lg);
@@ -296,7 +293,7 @@ nav {
   padding: var(--padding-lg);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-lg);
-  max-width: var(--max-width-sm);
+  max-width: var(--max-width-md);
   margin: 0 auto;
 }
 .demo-text {
@@ -311,13 +308,99 @@ nav {
   margin-bottom: var(--margin-base);
 }
 .demo-output {
-  color: var(--accent-color);
+  color: var(--primary-color);
   font-weight: var(--font-weight-bold);
   margin-top: var(--margin-base);
 }
 
 /* Testimonials Section */
+.testimonial-carousel {
+    max-width: var(--max-width-md);
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
 
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    background-color: var(--background-color);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.testimonial {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: var(--padding-lg);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-text {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.testimonial-role {
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.prev-btn, .next-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    color: var(--primary-color);
+}
+
+.indicators {
+    display: flex;
+    gap: 10px;
+    margin: 0 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: var(--primary-color);
+}
 
 /* Pricing Section */
 .pricing-toggle {
@@ -374,7 +457,63 @@ nav {
 }
 
 /* FAQ Section */
+/* styles.css */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.accordion-item {
+  background-color: var(--primary-color);
+  padding: var(--padding-sm);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--margin-base);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 5px 10px;
+    text-align: left;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-text);
+}
+
+.accordion-header:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.accordion-header.active::after {
+    content: '-';
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    background-color: var(--light-bg);
+}
+
+.accordion-content.open {
+    padding: 15px 20px;
+    max-height: 1000px; /* Adjust based on your content needs */
+}
 
 /* CTA Section */
 .cta-bg {
@@ -405,13 +544,14 @@ nav {
 .footer {
   background-color: var(--light-bg);
   color: var(--text-color);
-  padding: 40px 0;
+  padding: var(--padding-lg) 0;
 }
 .footer-content {
+  max-width: var(--max-width-lg);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: var(--padding-base);
 }
 .footer-links {
   display: flex;
